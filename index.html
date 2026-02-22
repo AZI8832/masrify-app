@@ -49,13 +49,14 @@ border-radius:15px;
 <br>
 <button onclick="addExpense()">إضافة</button>
 
+
 <div class="box">
 <h3>إجمالي المصروف:</h3>
 <h2 id="total">0 جنيه</h2>
 </div>
 
 <script>
-<script>
+
 let total = localStorage.getItem("total") 
     ? parseFloat(localStorage.getItem("total")) 
     : 0;
@@ -65,7 +66,7 @@ document.getElementById("total").innerText = total;
 function addExpense() {
     let amount = document.getElementById("amount").value;
 
-    if(amount !== ""){
+    if (amount !== "") {
         total += parseFloat(amount);
         document.getElementById("total").innerText = total;
 
@@ -74,10 +75,9 @@ function addExpense() {
         document.getElementById("amount").value = "";
     }
 }
+
 </script>
-}
-}
-</script>
+    
 
 </body>
 </html>
